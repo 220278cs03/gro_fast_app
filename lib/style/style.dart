@@ -17,5 +17,6 @@ abstract class Style {
   static const redColor = Color(0xffEC534A);
   static const useColorGrey = Color(0xffF1F4F3);
   static const darkGreen = Color(0xff194B38);
+  static const yellowColor = Color(0xffF0C334);
 
 }

@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:grow_fast_app/pages/product_page.dart';
 
 import '../model/product_model.dart';
 import '../style/style.dart';
@@ -21,8 +22,13 @@ class HorizontalProduct extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.only(right: 10),
-            child: CustomImageNetwork(
-              image: product?.image,
+            child: InkWell(
+              child: CustomImageNetwork(
+                image: product?.image,
+              ),
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (_)=> ProductPage(product: product,)));
+              },
             ),
           ),
           Container(
@@ -54,3 +60,4 @@ class HorizontalProduct extends StatelessWidget {
     );
   }
 }
+ 
