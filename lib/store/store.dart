@@ -20,15 +20,3 @@ static setId(int id) async {
   list.add(id.toString());
   store.setStringList("id", list);
 }
-
-// static Future<List<TodoModel>> getListTodo() async {
-//   SharedPreferences store = await SharedPreferences.getInstance();
-//   List<String> list = store.getStringList("todo") ?? [];
-//   List<TodoModel> listOfTodo = [];
-//   list.forEach((element) {
-//     listOfTodo.add(TodoModel.fromJson(jsonDecode(element)));
-//   });
-//   print(listOfTodo[0]);
-//   return listOfTodo;
-// }
-}
